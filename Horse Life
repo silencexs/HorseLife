@@ -35,7 +35,7 @@ end)
 -- Aba Parte Play --
 -- Aba Parte Play --
 -- Aba Parte Play --
-local MainSection = Main:NewSection("Player")
+local Mainsection = PhantomForcesWindow:NewSection("Player")
 
 local player = game.Players.LocalPlayer
 local char = player.Character
