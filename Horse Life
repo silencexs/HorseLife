@@ -36,23 +36,3 @@ end)
 local tab2 = DrRayLibrary.newTab("Extras", "ImageIdLogoHere")
 
 -- Add elements to the second tab
-tab2.newLabel("Hello, this is Tab 2.")
-tab2.newButton("Button", "Prints Hello!", function()
-    print('Hello!')
-end)
-tab2.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
-    if toggleState then
-      local InfiniteJumpEnabled = true
-      game:GetService("UserInputService").JumpRequest:connect(function()
-        if InfiniteJumpEnabled then
-          game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping"))
-    else
-      local InfiniteJumpEnabled = false
-      game:GetService("UserInputService").JumpRequest:connect(function()
-        if InfiniteJumpEnabled then
-          game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping"))
-    end
-end)
-tab2.newDropdown("Dropdown", "Select one of these options!", {"water", "dog", "air", "bb", "airplane", "wohhho", "yeay", "delete"}, function(selectedOption)
-    print(selectedOption)
-end)
