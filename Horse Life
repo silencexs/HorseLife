@@ -32,19 +32,6 @@ tab1.newInput("JumpPower", "Changes Your Jump Power to the number you type", fun
   game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(text)
 end)
 
-tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function()
-    local InfiniteJumpEnabled = true
-    game:GetService("UserInputService").JumpRequest:connect(function()
-      if InfiniteJumpEnabled then
-        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping"))
-  else
-    local InfiniteJumpEnabled = false
-    game:GetService("UserInputService").JumpRequest:connect(function()
-      if InfiniteJumpEnabled then
-        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping"))
-  end
-end)
-
 -- Create the second tab with a different image ID
 local tab2 = DrRayLibrary.newTab("Extras", "ImageIdLogoHere")
 
