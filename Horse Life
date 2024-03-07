@@ -27,3 +27,28 @@ print(value)
 KillingCheats:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
 print(value)
 end)
+
+local KillingCheat = PhantomForcesWindow:NewSection("Kill Options2")
+
+KillingCheat:CreateButton("Button", function()
+  print("HI")
+  end)
+
+  KillingCheat:CreateTextbox("TextBox", function(text)
+    print(text)
+end)
+
+KillingCheat:CreateToggle("Auto Ez", function(value)
+print(value)
+end)
+
+KillingCheat:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(text)
+print(text)
+end)
+
+KillingCheat:CreateSlider("Slider", 0, 100, 15, false, function(value)
+print(value)
+end)
+KillingCheat:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
+print(value)
+end)
