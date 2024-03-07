@@ -32,8 +32,7 @@ tab1.newInput("JumpPower", "Changes Your Jump Power to the number you type", fun
   game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(text)
 end)
 
-tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
-  if toggleState then
+tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function()
     local InfiniteJumpEnabled = true
     game:GetService("UserInputService").JumpRequest:connect(function()
       if InfiniteJumpEnabled then
