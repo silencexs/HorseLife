@@ -1,28 +1,58 @@
-local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
- 
-local PhantomForcesWindow = Library:NewWindow("Combat")
- 
-local KillingCheats = PhantomForcesWindow:NewSection("Kill Options")
- 
-KillingCheats:CreateButton("Button", function()
-print("HI")
+-- Load the DrRay library from the GitHub repository Library
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+
+-- Create a new window and set its title and theme
+local window = DrRayLibrary:Load("Horse Life Hub", "🐴")
+
+-- Create the first tab with an image ID
+local tab1 = DrRayLibrary.newTab("Misc", "ImageIdHere")
+
+-- Add elements to the first tab
+tab1.newLabel("Credits: Silence/kroenenx")
+
+tab1.newLabel("Beta version")
+
+tab1.newLabel("Future features are coming")
+
+tab1.newLabel("My discord: kroenenx") 
+
+tab1.newButton("Rejoin", "the name says it bruh", function()
+  game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
 end)
- 
-KillingCheats:CreateTextbox("TextBox", function(text)
-        print(text)
+
+tab1.newButton("Severhop", "Joins you in a different server", function()
+  loadstring(game:HttpGet("https://pastebin.com/raw/VduBT2nt"))()
 end)
- 
-KillingCheats:CreateToggle("Auto Ez", function(value)
-print(value)
+
+tab1.newInput("WalkSpeed", "Changes Your walk speed to the number you type", function(text)
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(text)
 end)
- 
-KillingCheats:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(text)
-print(text)
+
+tab1.newInput("JumpPower", "Changes Your Jump Power to the number you type", function(text)
+  game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(text)
 end)
- 
-KillingCheats:CreateSlider("Slider", 0, 100, 15, false, function(value)
-print(value)
- end)
-KillingCheats:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
-print(value)
+
+-- Create the second tab with a different image ID
+local tab2 = DrRayLibrary.newTab("Extras", "ImageIdLogoHere")
+
+-- Add elements to the second tab
+tab2.newLabel("Hello, this is Tab 2.")
+tab2.newButton("Button", "Prints Hello!", function()
+    print('Hello!')
+end)
+tab2.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
+    if toggleState then
+      local InfiniteJumpEnabled = true
+      game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+          game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping"))
+    else
+      local InfiniteJumpEnabled = false
+      game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+          game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping"))
+    end
+end)
+tab2.newDropdown("Dropdown", "Select one of these options!", {"water", "dog", "air", "bb", "airplane", "wohhho", "yeay", "delete"}, function(selectedOption)
+    print(selectedOption)
 end)
