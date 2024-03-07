@@ -35,7 +35,7 @@ end)
 -- Aba Parte Play --
 -- Aba Parte Play --
 -- Aba Parte Play --
-local Mainsection = PhantomForcesWindow:NewSection("Player")
+local HackPlayer = PhantomForcesWindow:NewSection("Player")
 
 local player = game.Players.LocalPlayer
 local char = player.Character
@@ -50,7 +50,7 @@ local ClickTP = false
 local FLy = false
 
 --WalkSpeed
-MainSection:CreateSlider("WalkSpeed", 15, 1500, 15, false, function(value)
+HackPlayer:CreateSlider("WalkSpeed", 15, 1500, 15, false, function(value)
     
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
     
@@ -58,7 +58,7 @@ end)
 
 
 --JumpHeight
-MainSection:CreateSlider("JumpHeight", 7, 500, 7, false, function(value)
+HackPlayer:CreateSlider("JumpHeight", 7, 500, 7, false, function(value)
     
     game.Players.LocalPlayer.Character.Humanoid.JumpHeight = value
     
@@ -67,7 +67,7 @@ end)
 
 
 --CLickTP
-MainSection:CreateToggle("Click-TP", function(state)
+HackPlayer:CreateToggle("Click-TP", function(state)
 
     if state == true then
 
@@ -110,12 +110,12 @@ end)
 
 
 --Fly
-MainSection:CreateButton("Press E To Toggle Fly", function(state)
+HackPlayer:CreateButton("Press E To Toggle Fly", function(state)
 
 end)
 
 --Tp to Player
-MainSection:CreateTextbox("TP to A Player", function(text)
+HackPlayer:CreateTextbox("TP to A Player", function(text)
     
     if game.Workspace:FindFirstChild(text):FindFirstChild("HumanoidRootPart") then
 
