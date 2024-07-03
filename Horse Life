@@ -7,7 +7,7 @@ local serv = win:Server("Preview", "")
 local btns = serv:Channel("Buttons")
 
 btns:Button("inf jump", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+loadstring(game:HttpGet("https://pastebin.com/raw/WweihvrM"))()
 DiscordLib:Notification("Notification", "inf jump", "Okay!")
 end)
 
