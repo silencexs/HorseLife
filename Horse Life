@@ -1,14 +1,13 @@
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
-local win = DiscordLib:Window("discord library")
-
+local win = DiscordLib:Window("Horse Life | Version: KELPHIE
 local serv = win:Server("Preview", "")
 
 local btns = serv:Channel("Buttons")
 
-btns:Button("inf jump", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/WweihvrM"))()
-DiscordLib:Notification("Notification", "inf jump", "Okay!")
+btns:Button("Infinit Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+DiscordLib:Notification("Notification", "Infinite Yield", "Okay!")
 end)
 
 btns:Seperator()
